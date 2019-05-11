@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Rock Paper Scissors</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav></nav>
+        <h3 class="text-muted">Rock Paper Scissors</h3>
+      </div>
+
+      <div class="jumbotron shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="row">
+          <div class="col">
+            <h2>Your choice</h2>
+          </div>
+          <div class="col">
+            <h2>Opponent</h2>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="row small-imgs">
+                  <img
+                    class="p-2  bd-highlight img-hover flipped"
+                    id="rock"
+                    src="./img/rock.jpg"
+                    alt="paper"
+                    height="33.33%"
+                    width="33.33%"
+                    onclick="changeToRock(),rockPaperScissors();"
+                  />
+                  <img
+                    class="p-2  bd-highlight img-hover flipped"
+                    id="paper"
+                    src="./img/paper.jpg"
+                    alt="paper"
+                    height="33.33%"
+                    width="33.33%"
+                    onclick="changeToPaper(),rockPaperScissors();"
+                  />
+                  <img
+                    class="p-2  bd-highlight img-hover flipped"
+                    id="scissors"
+                    src="./img/scissors.jpg"
+                    alt="paper"
+                    height="33.33%"
+                    width="33.33%"
+                    onclick="changeToScissors(),rockPaperScissors();"
+                  />
+                </div>
+                <div class="row">
+                  <img
+                    src="./img/rock.jpg"
+                    class="p-2 flex-fill bd-highlight flipped"
+                    id="youImg"
+                    alt="paper"
+                  />
+                </div>
+                <div class="row p-2 d-flex justify-content-center">
+                  <h2 id="youScore">0</h2>
+                </div>
+                <div class="row p-2 d-flex justify-content-center"></div>
+              </div>
+              <div class="col">
+                <div class="row empty-space"></div>
+                <div class="row">
+                  <img
+                    src="./img/rock.jpg"
+                    class="p-2 flex-fill bd-highlight animate"
+                    id="opponentImg"
+                    alt="paper"
+                  />
+                </div>
+                <div class="row p-2 d-flex justify-content-center">
+                  <h2 id="oppScore">0</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row p-2 d-flex justify-content-center">
+          <h2 id="whoWon"></h2>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Rock Paper Scissors by kZanev</p>
+      </footer>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
