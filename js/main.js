@@ -111,5 +111,5 @@ function rockPaperScissors() {
 
   document.getElementById("whoWon").innerHTML = winnerOrLoser;
 
-  console.log(youRockCount, youPaperCount);
+  console.log(youRockCount, youPaperCount,youScissorsCount);
 }
