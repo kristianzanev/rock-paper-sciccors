@@ -83,7 +83,7 @@
                 <div class="row">
                   <img
                     src="./img/rock.jpg"
-                    class="p-2 flex-fill bd-highlight animate"
+                    class="p-2 flex-fill bd-highlight"
                     id="opponentImg"
                     alt="paper"
                   />
@@ -98,15 +98,146 @@
         <div class="row p-2 d-flex justify-content-center">
           <h2 id="whoWon"></h2>
         </div>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+            role="progressbar"
+            aria-valuenow="45"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 0%"
+            id="progressBar"
+          ></div>
+        </div>
       </div>
 
       <footer class="footer">
         <p>&copy; Rock Paper Scissors by kZanev</p>
       </footer>
     </div>
+
+    <!-- Modal Loosing -->
+    <div
+      class="modal fade"
+      id="modalLoser"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLongTitle">
+              You lost the game!
+            </h2>
+          </div>
+          <div class="modal-body">
+            Winning and losing isn't everything; sometimes, the journey is just
+            as important as the outcome.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onClick="clearScore();"
+              data-dismiss="modal"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Winning -->
+    <div
+      class="modal fade"
+      id="modalWinner"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLongTitle">
+              Congratulations! You've won the game!
+            </h2>
+          </div>
+          <div class="modal-body">
+            Sometimes we’re tested not to show our weaknesses, but to discover
+            our strengths.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onClick="clearScore();"
+              data-dismiss="modal"
+            >
+              Try to win again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal on Page load -->
+
+    <div
+      class="modal fade"
+      id="modalPage"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLongTitle">
+              How to play the game:
+            </h2>
+          </div>
+          <div class="modal-body">
+            <p>
+              You beat the computer if your choice "beats" his in the following
+              way:
+              <br />- Rock beats Scissors <br />- Scissors beats Paper <br />-
+              Paper beats Rock <br />
+              Each round you score 1 point for beating the opponent but you
+              loose a point when the opponent beats you. To win the game you
+              need to beat 5 times in a row, otherwise you loose.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Start the game
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
 
